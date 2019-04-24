@@ -1,0 +1,16 @@
+<!--components/cusPicker/cusPicker.wxml-->
+ <view class="cusPickerContent"  wx:if="{{show}}" catchtap="close">
+    <view class="cusPickerWarpper showRangeList" >
+        <view class="wx-flex pickerRangeTitle">
+            <span class="cancle ml20 text">{{text}}</span>
+            <span class="confirm mr20 c-blue confrim c-blue" catchtap="confirm">确定</span>
+        </view>
+        <picker-view indicator-style="height: 40px;" class="picker-view" bindchange="bindChange">
+            <picker-view-column>
+                <view wx:for="{{range}}" style="line-height: 40px" wx:key="{{index}}">{{item}}</view>
+            </picker-view-column>
+        </picker-view>
+    </view> 
+ </view>
+
+ 

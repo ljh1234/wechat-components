@@ -1,0 +1,10 @@
+<view class="addPhoto-takePhotoCover">
+    <view class="addPhoto-imageCover" wx:for="{{list}}" wx:key="item_e" wx:for-index="index" wx:for-item="item_e">
+        <image src="{{item_e}}" data-i="{{index}}" data-name="{{name}}" catchtap="viewImg"></image>
+        <span class="deleteImg iconfont icon-guanbi" data-index="{{index}}"  wx:if="{{!disabled}}" data-name="{{name}}" catchtap="deleteImg" ></span>
+    </view>
+
+    <view class="addPhoto-imageCover">
+        <span class="iconfont icon-bottom_close takePhotoButton" wx:if="{{list.length < limit && !disabled}}" bindtap="takePhoto"></span>
+    </view>
+</view>

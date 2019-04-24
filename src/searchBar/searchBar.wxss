@@ -1,0 +1,15 @@
+/* components/searchBar/searchBar.wxss */
+@import '../../base/g7-base.wxss';
+
+.searchBar {
+    background-color: #fff;
+    padding: 10rpx 30rpx;
+    border-radius: 40rpx;
+}
+.searchBar .searchBar_icon {}
+.searchBar .searchBar_input {
+    margin-left: 14rpx;
+}
+.searchBar .searchBar_button {
+    /* width: 180rpx;    */
+}

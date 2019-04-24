@@ -1,0 +1,12 @@
+<!--components/tabs/tabs.wxml-->
+<view class="tabs f28rpx">
+    <view class="display_flex width_percent_100 {{model}}">
+        <view class="tabs_pane_warpper {{index === currentPane ? 'active' : ''}}"  bindtap="_paneChange" wx:for="{{tablist}}" wx:for-index="index" wx:for-item="item" wx:key="index" key="{{index}}">
+            <tab-pane label="{{item.label}}" tip="{{item.tip}}" key="{{index}}" bind:panetap="_paneTap"></tab-pane>
+        </view>
+    </view>
+    <view class="tabs_pane_content width_percent_100">
+        <slot></slot>       
+    </view>
+</view>
+  

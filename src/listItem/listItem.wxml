@@ -1,0 +1,16 @@
+<!--components/detectListItem/detectListItem.wxml-->
+
+<view class="g7-list" >
+    <view class="display_flex  width_percent_100" catchtap="tapfn" >
+        <view class="display_flex">
+            <slot name="Icon"></slot>
+        </view>
+        <text class="display_wx_flex_bd f32rpx">
+            {{title}}
+            <text class="c-g999">{{info}}</text>
+        </text>
+        <text class="arrow" wx:if="{{showArrow}}"></text>
+    </view>
+</view>
+  
+

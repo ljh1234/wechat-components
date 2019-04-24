@@ -1,0 +1,4 @@
+/* components/detectListItem/detectListItem.wxss */
+@import "../../base/iconfont/font_fms";
+@import "../../base/g7-base.wxss";
+

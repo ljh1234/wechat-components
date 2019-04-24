@@ -1,0 +1,14 @@
+/* components/tabs/tabsPane/tabPane.wxss */
+.tabs_pane {
+    text-align: center;
+    padding:16rpx 16rpx;
+}
+.tabs_pane_tip {
+    background-color:#ff595a;
+    border-radius:22rpx;
+    color:#fff;
+    display:inline-block;
+    width:44rpx;
+    height:44rpx;
+    margin-left: 8rpx;
+}

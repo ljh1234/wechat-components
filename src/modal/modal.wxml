@@ -1,0 +1,14 @@
+<!--components/modal/modal.wxml-->
+<view class="mask" wx:if="{{isShow}}">
+    <view class="main">
+        <view class="title text-align-left">{{title}}</view>
+        <view wx:if="{{phone !== ''}}" class="content">
+            <span>{{phoneBefore}}</span>
+            <span class="call" catchtap="call">{{phone}}</span>
+            <span>{{phoneAfter}}</span>
+        </view>
+        <view wx:else class="content">{{content}}</view>
+        
+        <view class="action  text-align-right"><span class="c-blue" catchtap="confirm">确定</span></view>
+    </view>
+</view>

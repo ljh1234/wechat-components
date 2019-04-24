@@ -1,0 +1,59 @@
+<!--components/dateSelect/dateSelect.wxml-->
+<view class="warpper" wx:if="{{show}}" catchtap="close">
+    <view class="main dateShow" catchtap>
+        <view class="title">
+            <view class="selectDate" >
+                {{selectDate}}
+            </view>
+            <view  class="confirm c-blue" catchtap="dayUpdate">
+                确定
+            </view>
+        </view>
+        <view class="content w100">
+            <view class="monthSelect_warpper">
+                <view class="monthSelect wx-flex">
+                    <span class="arrowWarpper" catchtap="preMonth">
+                        <image class="monthSelectArrow" src="../../images/next.png"/>
+                    </span>
+                    <span catchtap="showMonthList">
+                        {{selectYear + '-' + (selectMonth < 10 ? '0' + selectMonth : selectMonth)}}
+                    </span>
+                    <span class="arrowWarpper" catchtap="nextMonth" >
+                        <image class="monthSelectArrow rotage" src="../../images/next.png" />
+                    </span>
+                </view>
+            </view>
+            <view class="wx-flex">
+                <view class="item" wx:for="{{weekList.cn}}" wx:for-item="item" wx:for-index="index" wx:key="{{index}}">
+                    {{item}}
+                </view>
+            </view>
+            <view class="w100 day_list" >
+                <view  class="item {{item.monthType === 'curr' ? '' : 'c-dark'}} " wx:for="{{dayList}}" wx:for-item="item" wx:for-index="index" wx:key="{{index}}">
+                    <span catchtap="daySelect" class="{{item.selected ? 'selected' : ''}}" data-key="{{index}}">
+                        {{item.dayNum}}
+                    </span>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="monthListWarpper monthShow" wx:if="{{showMonthList}}">
+        <view class="monthListTitle wx-flex">
+            <span class="monthCancel" catchtap="monthCancel" catchtap="closeMonthList">取消</span>
+            <span class="monthConfirm" catchtap="monthConfirm" catchtap="monthConfirm">确定</span>
+        </view>
+        <view class="pickerViewWarpper" >
+            <picker-view indicator-style="height: 40px;" value="{{pickerValue}}" class="pickerView" bindchange="monthPickerChange">
+                <picker-view-column>
+                    <view wx:for="{{yearList}}" style="line-height: 40px" wx:key="{{index}}">{{item}}</view>
+                </picker-view-column>
+                <picker-view-column>
+                    <view wx:for="{{monthList}}" style="line-height: 40px" wx:key="{{index}}">
+                        {{item < 10? '0' + item : item}}
+                    </view>
+                </picker-view-column>
+            </picker-view>
+        </view>
+    </view>
+</view>
+  

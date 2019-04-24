@@ -1,0 +1,9 @@
+<!--components/searchBar/searchBar.wxml-->
+<view class="display_flex searchBar f28rpx">
+    <icon class="searchBar_icon" type="search" size="16" color=""></icon>
+    <input class="searchBar_input" type="{{type}}" bindblur="_blur"  bindconfirm="_confirm" bindinput="_input" value="{{searchContent}}" placeholder="{{placeholdertext}}"></input>
+    <button class="default searchBar_button font_color_fff " wx:if="{{showButton}}" style="background-color:{{buttoncolor}}" size="mini" loading="{{loading}}">
+        搜索
+    </button> 
+</view>
+  

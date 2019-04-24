@@ -1,0 +1,46 @@
+/* components/reservePicker/reservePicker.wxss */
+@import "/base/g7-base";
+
+
+.reservePicker_mask {
+     position: fixed;
+     left: 0;
+     top: 0;
+     width: 100%;
+     height: 100%;
+     z-index: 1;
+     background-color: rgba(30, 30, 30, 0.4);
+}
+.reservePicker_warpper {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    background-color: #fff;
+    padding: 20rpx 10rpx;
+}
+.showIn {
+    animation: slideIn 2s linear forwards; 
+}
+.reservePicker_title {
+    text-align: center;
+    line-height: 30px;
+    width: 100%;
+    background-color: #fff;
+}
+.reservePicker_button_warpper {
+    padding-top: 30rpx;
+    height: 140rpx;
+}
+.reservePicker_button {
+    width: 40%;
+    font-size: 28rpx;
+}
+@keyframes slideIn {
+    from {
+        bottom: -20%;
+    }
+
+    to {
+        top: 20%;
+    }
+}

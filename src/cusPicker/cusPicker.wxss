@@ -1,0 +1,78 @@
+/* components/cusPicker/cusPicker.wxss
+.cusPicker {
+    width: 40%;
+    background-color: #fff;
+    height: 30px;
+    line-height: 30px;
+    padding: 6px;
+    background-color: #fff;
+    margin-top: 4px;
+} */
+.cusPickerContent {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, .4);
+}
+.wx-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cusPickerWarpper {
+    width: 100%;
+    height: 300px;
+    position: fixed;
+    left: 0;
+    background-color: #fff;
+}
+
+.pickerRangeTitle {
+    line-height: 40px;
+    font-size: 16px;
+    background-color: #dedede;
+}
+
+.text {
+    border-bottom: 2px solid #000;
+    font-weight: bold;
+    mrgin-left: 10px;
+}
+
+.timeRange {
+    line-height: 46px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    /* border-top: 1px solid #dedede;
+    border-bottom:1px solid #dedede; */
+}
+
+.picker-view {
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.showRangeList {
+    animation: showTimeRange 0.3s linear forwards;
+}
+.confrim {
+    margin-right: 10px;
+    font-size: 16px;
+}
+.c-blue {
+    color: #00a9e2;
+}
+@keyframes showTimeRange {
+    from {
+        bottom: -300px;
+    }
+
+    to {
+        bottom: 0px;
+    }
+}

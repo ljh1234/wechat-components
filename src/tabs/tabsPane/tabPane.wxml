@@ -1,0 +1,6 @@
+<!--components/tabs/tabsPane/tabPane.wxml-->
+<view class="tabs_pane" key="{{key}}" bindtap="tabs_pane_tap">
+    <text class="tabs_pane_label">{{label}}</text>
+    <text class="tabs_pane_tip f24rpx" wx:if="{{showTip}}">{{tip}}</text> 
+</view>
+  

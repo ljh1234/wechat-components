@@ -1,0 +1,38 @@
+<!--components/photoAction/photoAction.wxml-->
+<view class="wx-flex w100">
+    <view class="label wx-flex">
+        <span class="icon iconfont icon-gou  {{result ? 'c-weui-green' : 'c-gray'}}"></span>
+        <span class="{{exampleurl.length ? 'photoNameWithExamplePhoto' : 'photoNameWithoutExamplePhoto'}}">
+            {{name}}
+        </span>
+        <!-- 示例照片，没有则不显示 -->
+        <image wx:if="{{exampleurl.length}}" wx:for="{{exampleurl}}" wx:key="item" wx:for-item="item" src="{{item}}" class="exampleUrl" bindtap='lookFile'  data-key="{{key}}" data-value="{{item}}"  wx:key="index"></image>
+    </view>
+    <view class="wx-flex io_input has_file">
+        <view class="no_border_btn c_blue" bindtap="lookFile" data-key="{{key}}" data-value="{{value}}" >
+            <span class="icon iconfont icon-tupian c_blue"></span>
+            查看
+        </view>
+        <view class="btn  c_black" catchtap="select" data-sourcetype="album" data-key="{{key}}" data-value="{{value}}" >
+            <span class="icon iconfont icon-tupian  c_black"></span>
+            浏览
+        </view>
+        <view class="btn  c_black" catchtap="select"  data-sourcetype="camera" data-key="{{key}}" data-valiue="{{value}}">
+            <span class="icon iconfont icon-paizhao c_black"></span>
+            {{mediatype === 'img' ? '拍摄' : '录制'}}
+        </view>
+    </view>
+    <view class="video_warpper" wx:if="{{videoSrc}}">
+        <view class="">
+            <span class="close_video">
+                <span class="icon iconfont icon-guanbi c_white" catchtap="closeVideo">关闭</span>
+            </span>
+            
+        </view>
+        <view class="video_main" >
+            <video class="video"  src="{{videoSrc}}"    show-center-play-btn="true" initial-time="0" autoplay="true"  direction="0" >
+                
+            </video>
+        </view>
+    </view>
+</view>

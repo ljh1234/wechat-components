@@ -1,0 +1,42 @@
+
+.addPhoto-takePhotoCover {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.addPhoto-imageCover {
+    width: 60px;
+    height: 60px;
+    position: relative;
+    margin-right: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.addPhoto-imageCover .deleteImg {
+    display:block;
+    position:absolute;
+    right:-12px;
+    top:-7px;
+    width:20px;
+    height:20px;
+    border-radius:10px;
+}
+
+.addPhoto-imageCover .deleteImg:hover {
+    background-color:#333;
+}
+
+.addPhoto-imageCover image {
+    width: 60px;
+    height: 60px;
+}
+
+.addPhoto-imageCover .takePhotoButton {
+    width: 60px;
+    height: 60px;
+    display: block;
+    margin-bottom: 8px;
+    font-size: 60px;
+}

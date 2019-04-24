@@ -1,0 +1,36 @@
+/* components/modal/modal.wxss */
+.mask {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    position: fixed;
+    left:0;
+    top: 0;
+    z-index: 10000;
+}
+.mask .main {
+    position:absolute;
+    left:calc(50% - 250rpx);
+    top:300rpx;
+    width:500rpx;
+    height:300rpx;
+    background-color:#fff;
+    z-index:1000;
+    font-size:14px;
+    opacity:1;
+    padding:20rpx 30rpx;
+}
+.mask .main .content {
+    font-size:14px;
+    height:180rpx;
+    text-align:left;
+    padding:20rpx 0;
+}
+.mask .action {
+    width:100%;
+    text-align:right;
+    color: #00a9e2;
+}
+.call {
+    color: #50c67c;
+}

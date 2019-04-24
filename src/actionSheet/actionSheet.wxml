@@ -1,0 +1,24 @@
+<view class="modal" wx:if="{{isShow}}">
+    <view class="main">
+        <view class="ptb16 bg_fa wx-flex">
+            <view class="wx-flex-bd tl pl20 c-g333" catchtap="cancel">取消</view>
+            <view class="wx-flex-bd tr pr20 c-light-blue" catchtap="confirm">确定</view>
+        </view>
+
+        <view class="content">
+            <view class="wx-flex-center ptb16 fb">
+                {{title}}
+            </view>
+
+            <view class="wx-flex ptb16 border-b" wx:for="{{content}}" wx:for-index="index" wx:for-item="item" wx:key="{{index}}" data-index="{{index}}" bindtap="selectIndex">
+                <view class="wx-flex-bd tl pl20 {{selected_index == index ? 'c-light-blue' : ''}}">
+                    {{item}}
+                </view>
+
+                <view class="wx-flex-bd tr pr20">
+                    <span class="iconfont {{selected_index == index ? 'icon-weigouxuanv2 c-light-blue' : 'icon-tucenggouxuan'}}" style="font-size:22px;"></span>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

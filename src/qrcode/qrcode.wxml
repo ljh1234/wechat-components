@@ -1,0 +1,13 @@
+<view class="qrcode-mask" hidden="{{!showQrcodeMask}}">
+    <view class="qrcode-box">
+        <view class='close-mask' bindtap="closeMask">
+            <span class="iconfont icon-close-circle" style="font-size:22px"></span>
+        </view>
+
+        <view style="position:relative;top:-8px;">
+            <view class="f28 c-g333">邀请客户扫描二维码进行服务评价</view>
+            <view class="f24 c-g666 mt10">有效期30分钟</view>
+            <canvas canvas-id="qrcode-canvas" class="canvas"/>
+        </view>
+    </view>
+</view>

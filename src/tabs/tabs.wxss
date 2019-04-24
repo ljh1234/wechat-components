@@ -1,0 +1,53 @@
+/* components/tabs/tabs.wxss */
+@import "../../base/g7-base.wxss";
+
+.tabs {
+    width: 100%;
+}
+
+.tabs .tabs_pane_warpper {
+    height: 40px;
+}
+.tabs .underline{
+    background-color: #fff;
+}
+.tabs .underline .active {
+    border-bottom: 2px solid #00a9e2;
+    color: #00a9e2;
+}
+.tabs .border {
+    border-left: 2rpx solid #dedede;
+    border-top: 2rpx solid #dedede;
+    border-right: 2rpx solid #dedede;
+    background-color: #F5F7FA;
+}
+.tabs .border .tabs_pane_warpper {
+    color: #333;
+}
+.tabs .border .active {
+    background-color: #fff;
+    color: #00a9e2;
+}
+.tabs .tabs_pane_content {
+    background-color: #fff;
+    /* border-left: 2rpx solid #dedede;
+    border-bottom: 2rpx solid #dedede;
+    border-right: 2rpx solid #dedede; */
+}
+.tabs .fill {
+    /* border: 1rpx solid #dedede; */
+    /* border-top: 1rpx solid #dedede;
+    border-right: 1rpx solid #dedede; */
+    background-color: #fff;
+}
+.tabs .fill .tabs_pane_warpper {
+    border: 1rpx solid #dedede;
+    /* border-right: 1rpx solid #dedede;
+    border-top: 1rpx solid #dedede; */
+    color: #333;
+}
+.tabs .fill .active {
+    background-color: #00a9e2;
+    border-color: #00a9e2;
+    color: #fff;
+}
